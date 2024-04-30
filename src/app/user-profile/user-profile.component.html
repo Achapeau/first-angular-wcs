@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div class="head">
+        <h1>Hello, je suis {{user.firstname}} {{user.name}}</h1>
+        <img [src]="user.photo" [alt]="user.alt">
+    </div>
+    <div class="body">
+        <div class="texte">
+            <div class="quote">{{user.quote}}</div>
+            <input type="text-area" [(ngModel)]="user.quote">
+        </div>
+    </div>
+    <div class="age">
+        @if (oldest) {
+            <div class="see">Age: {{user.age}}</div>
+        }        
+        <button class="btn" (click)="showAge()">{{textButton}}</button>        
+    </div>
+</div>
