@@ -1,1 +1,43 @@
-<p>signup works!</p>
+<div class="formulaire">
+    <form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
+        <div class="champ">
+          <label for="title-order">Votre prénom :</label>
+          <input id="title-order" name="title-order" type="text" [(ngModel)]="newOrder.firstname" required minlength="3" maxlength="15" #firstname="ngModel">
+        </div>
+        <div *ngIf="firstname.errors && myForm.submitted">
+            <span *ngIf="firstname.errors?.['required']">Un prénom est requis</span>
+            <span *ngIf="firstname.errors?.['minlength']">Le prénom doit contenir au moins 3 caractères</span>
+            <span *ngIf="firstname.errors?.['maxlength']">Le prénom doit contenir au plus 15 caractères</span>        
+        </div>  
+
+        <div class="champ">
+          <label for="quantity-order">Votre nom :</label>
+          <input id="quantity-order" name="quantity-order" [(ngModel)]="newOrder.lastname" type="text" required minlength="3" maxlength="15" #lastname="ngModel">
+        </div>
+        <div *ngIf="lastname.errors && myForm.submitted">
+            <span *ngIf="lastname.errors?.['required']">Un nom est requis</span>
+            <span *ngIf="lastname.errors?.['minlength']">Le nom doit contenir au moins 3 caractères</span>
+            <span *ngIf="lastname.errors?.['maxlength']">Le nom doit contenir au plus 15 caractères</span>        
+        </div>  
+
+        <div class="champ">
+          <label for="contact-order">Votre adresse mail:</label>
+          <input id="contact-order" name="contact-order" [(ngModel)]="newOrder.email" type="email" required email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #contact="ngModel">
+        </div>
+        <div *ngIf="contact.errors && myForm.submitted">
+            <span *ngIf="contact.errors?.['required']">Un email est requis</span>
+            <span *ngIf="contact.errors?.['email']">L'email est invalide</span>
+        </div>
+
+        <div class="champ">
+            <label for="password-order">Votre mot de passe:</label>
+            <input id="password-order" name="password-order" [(ngModel)]="newOrder.password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" #password="ngModel">
+        </div>
+        <div *ngIf="password.errors && myForm.submitted">
+            <span *ngIf="password.errors?.['required']">Un mot de passe est requis</span>
+            <span *ngIf="password.errors?.['pattern']">Le mot de passe doit contenir au moins 8 caractères</span>
+        </div>  
+    
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
