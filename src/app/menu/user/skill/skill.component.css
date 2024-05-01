@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 15rem;
+    width: 75%;
+    background-color: #1c6ea4;
+    color: white;
+    border-radius: 1em;
+    margin-top: 1em;
+    box-shadow: 13px 13px 34px 5px rgba(0,0,0,0.66);
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
