@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="head">
+        <h1>Jazzy Cocktails</h1>
+    </div>
+    <div class="body">
+        <span>Choisissez votre cocktail</span>
+        <div class="menu">
+            <div class="elem" *ngFor="let item of cocktails">
+                <span>{{item.name}}</span>
+                <span> {{item.price}}€</span>
+                <img src="assets/{{item.image}}" alt="{{item.name}}">
+            </div>
+        </div>
+    </div>
+</div>
