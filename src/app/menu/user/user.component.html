@@ -1,1 +1,49 @@
-<p>user works!</p>
+<div class="container">
+    <form [formGroup]="myForm" class="formulaire" (ngSubmit)="onSubmit()">
+        <div class="champ">
+          <label for="username">Votre username :</label>
+          <input id="username" name="username" type="text" required minlength="3" maxlength="15" formControlName="username">
+        </div>
+        <div class="champ">
+          <label for="email">Votre email :</label>
+          <input id="email" name="email" type="text" required minlength="3" formControlName="email">
+        </div>
+        <div class="champ">
+          <label for="password">Votre mot de passe :</label>
+          <input id="password" name="password" type="text" required minlength="3" formControlName="password">
+        </div>
+        <div class="adresse">
+            <span>Votre adresse: </span>
+            <div class="complement">
+                <label for="number">N° de rue :</label>
+                <input id="number" name="number" type="number" formControlName="number" >
+                <label for="complement">complément (facultatif: bis, ter, etc)</label>
+                <input id="complement" name="complement" type="text" formControlName="complement">
+            </div>
+            <div class="complement">
+                <label for="street">Rue :</label>
+                <input id="street" name="street" type="text" required minlength="3" formControlName="street">
+                <label for="zipcode">Code postal :</label>
+                <input id="zipcode" name="zipcode" type="number" required minlength="5" maxlength="5" formControlName="zipcode">
+            </div>
+            <div class="complement">
+                <label for="city">Ville :</label>
+                <input id="city" name="city" type="text" required minlength="3" formControlName="city">
+            </div>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div class="retour" *ngIf="custommerCreate">
+        <div class="response-header">
+            <h2>Salut ma caille! tu t'appelles bien {{myForm.controls.username.value}} ?</h2>
+            <span>Voici un petit récap' de tes informations :</span>
+        </div>
+        <div class="response-body">
+            <span>email: {{myForm.controls.email.value}}</span>
+            <span>mot de passe: {{myForm.controls.password.value}}</span>
+            <span>adresse: {{myForm.controls.number.value}} {{myForm.controls.complement.value}} {{myForm.controls.street.value}}, {{myForm.controls.zipcode.value}} {{myForm.controls.city.value}}</span>
+        </div>
+        <button (click)="goToMenu()">Retour au menu</button>
+        
+    </div>
+</div>
