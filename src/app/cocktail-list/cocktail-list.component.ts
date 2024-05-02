@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CocktailService } from '../cocktail.service';
 import { Cocktail } from '../cocktail.model';
 import { NgFor } from '@angular/common';
@@ -10,9 +10,13 @@ import { NgFor } from '@angular/common';
   templateUrl: './cocktail-list.component.html',
   styleUrl: './cocktail-list.component.css'
 })
-export class CocktailListComponent {
+export class CocktailListComponent implements OnInit {
   private cocktailsService = inject(CocktailService);
+  cocktails: Cocktail[] = [];
 
-  cocktails: Cocktail[] = this.cocktailsService.getCocktails();
-
+  ngOnInit(): void {
+      this.cocktailsService.getCocktails().subscribe((cocktailsJson) => {
+        this.cocktails = cocktailsJson
+      })
+  }
 }
