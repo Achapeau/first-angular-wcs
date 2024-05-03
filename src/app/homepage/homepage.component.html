@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Homepage</h1>
+    <div class="menu">
+        <a routerLink="/dashboard">Dash Board</a>
+        <a routerLink="/adminpage">Admin Page</a>        
+        <a routerLink="/homepage">Homepage</a>
+    </div>
+    <div class="body">
+        <form [formGroup]="form" class="formulaire" (ngSubmit)="onSubmit()">
+            <div class="champ">
+                <label for="name">Enter your name</label>
+                <input type="text" name="name" id="name" formControlName="name" required>
+            </div>
+            <div class="champ">
+                <label for="role">Enter your role</label>
+                <select name="role" id="role" formControlName="role">
+                    <option value="ANONYMOUS">ANONYMOUS</option>
+                    <option value="USER">USER</option>
+                    <option value="ADMIN">ADMIN</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+</div>

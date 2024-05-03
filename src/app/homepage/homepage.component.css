@@ -1,0 +1,66 @@
+.container {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.menu {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu a {
+    margin: 10px;
+}
+
+.menu a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2f2f2;
+    border-radius: 10px;    
+}
+
+.champ {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

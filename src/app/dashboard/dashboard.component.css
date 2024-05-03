@@ -1,0 +1,23 @@
+.container {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.menu {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu a {
+    margin: 10px;
+}
